@@ -4,6 +4,7 @@
         <title>alexbondor</title>
 
         <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
 
         <style>
             html, body {
@@ -27,8 +28,8 @@
             }
         </style>
     </head>
-    <body>
-        <div class="title"><u>Alex Bondor / Hacker</u></div>
+    <body class="welcome-body">
+        <div class="title"><u>Alex Bondor / Computer Scientist</u></div>
         <div class="subtitle">Cluj-Napoca, România</div>
     </body>
 </html>
