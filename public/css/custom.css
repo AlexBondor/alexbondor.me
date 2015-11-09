@@ -1,3 +1,26 @@
-.welcome-body {
-	width:100%;
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 10px;
+    padding: 0px;
+    width: 100%;
+    font-family: 'Inconsolata';
+}
+
+.name {
+	font-weight: 700;
+    font-size: 60px;
+}
+
+.title {
+	font-weight: 700;
+    font-size: 37px;
+}
+
+.subtitle {
+	padding-top: -10px;
+	color: #BBB;
+    font-size: 33px;
 }
