@@ -9,5 +9,6 @@
     <body>
         <div class="name"><u>Alex Bondor</u></div>
         <div class="title">Computer Scientist</div>
+        <div class="subtitle">Doer|Creator|Persuader</div>	
     </body>
 </html>
