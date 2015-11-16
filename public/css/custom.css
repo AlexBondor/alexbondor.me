@@ -4,8 +4,8 @@
  light-cream: #c5c5cd
 */
 body {
-    padding: 20px;
-    font-family: 'Inconsolata';
+    height: 100%;
+    font-family: 'Inconsolata', serif;
 }
 
 .name {
@@ -14,6 +14,10 @@ body {
     font-size: 50px;
     color: #FF6600;
     text-decoration: underline;
+}
+
+.orange-text {
+    color: #FF6600;
 }
 
 .title {
@@ -39,4 +43,29 @@ body {
 
 .center-text {
     text-align: center;
+}
+
+.link {
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #c5c5cd;
+    text-decoration: none;
+}
+
+#left {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+#right {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 0;
+    overflow-y: scroll;
 }
