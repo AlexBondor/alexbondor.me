@@ -1,27 +1,42 @@
 /* 
  dark-gray: #636363
  orage: #FF6600
- light-cream: #E6E6EE
+ light-cream: #c5c5cd
 */
 body {
-    margin: 10px;
-    padding: 0px;
+    padding: 20px;
     font-family: 'Inconsolata';
 }
 
 .name {
+    margin: auto;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 50px;
     color: #FF6600;
+    text-decoration: underline;
 }
 
 .title {
     font-weight: 700;
-    font-size: 37px;
+    font-size: 31px;
     color: #636363;
 }
 
 .subtitle {
-    font-size: 30px;
-    color: #E6E6EE;
+    font-size: 25px;
+    color: #c5c5cd;
+}
+
+.text {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.self-portrait {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.center-text {
+    text-align: center;
 }
