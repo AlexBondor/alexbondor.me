@@ -88,3 +88,7 @@ body {
     margin-right: 10%;
     width: 80%;
 }
+
+.row {
+    margin: 0px;
+}

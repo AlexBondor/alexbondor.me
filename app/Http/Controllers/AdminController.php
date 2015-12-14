@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
+use App\Http\Requests\CreateEntryRequest;
+use App\Entry;
+
 use Markdown;
 
 class AdminController extends Controller
@@ -23,9 +26,19 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function addEntry(Request $request)
+    public function addEntry(CreateEntryRequest $request)
     {
-        dd($request->data);
+        $rawText = $request->content;
+        $parsedText = Markdown::parse($rawText);
+
+        $hidden = $request->isHidden == null ? false : true;
+
+        dd($parsedText);
+
+//        Entry::create([
+//            'content' => $parsedText,
+//            'hidden' => $hidden
+//        ]);
     }
 
     public function parsedownEntry() {
