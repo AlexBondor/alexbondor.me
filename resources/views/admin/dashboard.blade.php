@@ -8,14 +8,12 @@
                 {!! csrf_field() !!}
                 <a class="pull-right" href="http://parsedown.org/tests/" target="_blank">help</a>
                 <textarea name="content" class="form-control new-entry-textarea" rows="20"
-                          placeholder="Craft something awesome.."></textarea>
+                          placeholder="Craft something awesome.." onkeyup="parsedown()"></textarea>
                 <div class="pull-right">
                     <input type="checkbox" name="isHidden"> Hidden?
                 </div>
                 <br>
-                <br>
-                <button type="button" class="btn btn-info" onclick="parsedown()">Parse</button>
-                <button type="button" class="btn btn-success pull-right" type="submit">Ready</button>
+                <button class="btn btn-block" type="submit">Ready</button>
             </form>
         </div>
         <div class="col-xs-12 col-sm-6">
