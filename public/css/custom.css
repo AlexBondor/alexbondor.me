@@ -69,3 +69,7 @@ body {
     right: 0;
     overflow-y: scroll;
 }
+
+.login-form {
+    padding-top: 20px;
+}
