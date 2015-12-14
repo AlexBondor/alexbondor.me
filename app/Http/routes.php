@@ -33,3 +33,5 @@ Route::get('/error', function()
 {
     return View::make('errors/503');
 });
+
+Route::get('/parsedown', 'AdminController@parsedownEntry');

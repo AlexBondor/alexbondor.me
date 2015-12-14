@@ -15,6 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/jquery-ui.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -36,6 +37,9 @@
 
     ga('create', 'UA-63171754-2', 'auto');
     ga('send', 'pageview');
-
 </script>
+<script src="{{ asset('/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ asset('/js/jquery-ui.js') }}"></script>
+<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+@yield('script')
 </html>

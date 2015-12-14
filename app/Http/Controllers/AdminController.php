@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
+
+use Markdown;
 
 class AdminController extends Controller
 {
@@ -20,8 +23,12 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function addEntry()
+    public function addEntry(Request $request)
     {
+        dd($request->data);
+    }
 
+    public function parsedownEntry() {
+        return Markdown::parse(Request::get('text'));
     }
 }

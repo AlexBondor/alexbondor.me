@@ -73,3 +73,18 @@ body {
 .login-form {
     padding-top: 20px;
 }
+
+.dashboard-title {
+    width: 100%;
+    text-align: center;
+}
+
+.new-entry-textarea {
+    resize: none;
+}
+
+.new-entry-form {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
