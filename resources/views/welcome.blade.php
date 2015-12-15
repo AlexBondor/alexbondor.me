@@ -12,6 +12,16 @@
         <div id="right" class="col-xs-8">
             <div class="row text">
                 <div class="col-xs-3">
+                    <a href="/" class="link">
+                        >_ projects
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/thoughts" class="link">
+                        >_ thoughts
+                    </a>
+                </div>
+                <div class="col-xs-3">
                     <a href="https://github.com/AlexBondor" class="link" target="_blank">
                         >_ github
                     </a>
@@ -20,12 +30,6 @@
                     <a href="https://www.linkedin.com/in/alexandrubondor" class="link" target="_blank">
                         >_ linkedin
                     </a>
-                </div>
-                <div class="col-xs-3">
-
-                </div>
-                <div class="col-xs-3">
-
                 </div>
             </div>
             <br>

@@ -42,6 +42,10 @@ Route::get('/service/parsedown', 'AdminController@parsedownEntry');
 // Entries
 Route::post('/service/entry-remove', 'AdminController@removeEntry');
 
+//
+Route::get('/thoughts/{id}', 'ThoughtsController@show');
+Route::get('/thoughts', 'ThoughtsController@index');
+
 Route::get('/error', function()
 {
     return View::make('errors/503');

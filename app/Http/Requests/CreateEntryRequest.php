@@ -8,6 +8,8 @@ class CreateEntryRequest extends Request
 {
     protected  $title;
 
+    protected  $slug;
+
     protected $cover;
 
     protected $content;

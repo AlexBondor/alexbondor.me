@@ -18,5 +18,5 @@ class Entry extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'cover', 'content', 'rawContent', 'isHidden'];
+    protected $fillable = ['title', 'slug', 'cover', 'content', 'rawContent', 'isHidden'];
 }

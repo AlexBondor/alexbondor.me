@@ -62,6 +62,9 @@ class AdminController extends Controller
         $entryId = Request::get('entryId');
 
         $title = $request->title;
+        $slug = strtolower($title);
+        $slug = preg_replace('[ ]', '-', $slug);
+        $slug = preg_replace('[^\w-]', '', $slug);
         $cover = $request->cover;
         $rawContent = $request->rawContent;
         $parsedContent = Markdown::parse($rawContent);
@@ -71,6 +74,7 @@ class AdminController extends Controller
         {
             $entry = Entry::find($entryId);
             $entry->title = $title;
+            $entry->slug = $slug;
             $entry->cover = $cover;
             $entry->content = $parsedContent;
             $entry->rawContent = $rawContent;
@@ -82,6 +86,7 @@ class AdminController extends Controller
         {
             Entry::create([
                 'title' => $title,
+                'slug' => $slug,
                 'cover' => $cover,
                 'content' => $parsedContent,
                 'rawContent' => $rawContent,

@@ -15,6 +15,7 @@ class CreateEntriesTable extends Migration
         Schema::create('entries', function (Blueprint $table) {
             $table->increments('id');
             $table->text('title');
+            $table->text('slug');
             $table->text('cover');
             $table->text('content');
             $table->text('rawContent');

@@ -107,3 +107,23 @@ body {
 .new-entry-cover {
     width: 100%;
 }
+
+.entry {
+    position: relative;
+}
+
+.entry:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.cover-image{
+    width: 100%;
+    height: auto;
+}
+
+.text-over-cover {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
