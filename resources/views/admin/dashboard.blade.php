@@ -1,40 +1,44 @@
-@extends('app')
-
-@section('content')
-    <h1 class="dashboard-title">Creative corner</h1>
-    <div class="row">
-        <div class="col-xs-12 col-sm-6">
-            <form class="new-entry-form" method="POST" action="/dashboard">
-                {!! csrf_field() !!}
-                <a class="pull-right" href="http://parsedown.org/tests/" target="_blank">help</a>
-                <textarea name="content" class="form-control new-entry-textarea" rows="20"
-                          placeholder="Craft something awesome.." onkeyup="parsedown()"></textarea>
-                <div class="pull-right">
-                    <input type="checkbox" name="isHidden"> Hidden?
-                </div>
-                <br>
-                <button class="btn btn-block" type="submit">Ready</button>
-            </form>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <div id="new-entry-form-preview">
-            </div>
-        </div>
+@extends('admin/navbar')
+@section('subcontent')
+    {!! csrf_field() !!}
+    <h1 class="centered-title">Dashboard</h1>
+    <div id="myEntries">
+        @foreach($entries as $entry)
+            <button onclick="removeEntry('{{ $entry->id }}')">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <button onclick="editEntry('{{ $entry->id }}')">
+                <span class="glyphicon glyphicon-edit"></span>
+            </button>
+            <h3>{{ $entry->title }}</h3> <span>{{ $entry->created_at }}</span>
+            <br>
+            <h5>{{ $entry->cover }}</h5>
+            <br>
+            <br>
+        @endforeach
     </div>
-@section('script')
+@section('subscript')
     @parent
     <script type="text/javascript">
-        function parsedown() {
-            $.ajax({
-                type: "GET",
-                url: '/parsedown',
-                data: {
-                    'text': $('.new-entry-textarea').val()
-                }
-            }).done( function (data){
-                $('#new-entry-form-preview').html(data);
-            });
+        function removeEntry(id) {
+            if (confirm("Are you sure?")) {
+                var _token = document.getElementsByName("_token")[0].value;
+                $.ajax({
+                    type: 'POST',
+                    url: '/service/entry-remove',
+                    data: {
+                        'entryId': id,
+                        '_token': _token
+                    }
+                }).done(function() {
+                    location.reload();
+                });
+            }
+        }
+
+        function editEntry(id) {
+            document.location.href = '/dashboard/new-entry?id=' + id;
         }
     </script>
-    @endsection
+@endsection
 @endsection

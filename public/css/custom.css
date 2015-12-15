@@ -74,7 +74,7 @@ body {
     padding-top: 20px;
 }
 
-.dashboard-title {
+.centered-title {
     width: 100%;
     text-align: center;
 }
@@ -83,7 +83,7 @@ body {
     resize: none;
 }
 
-.new-entry-form {
+.new-entry-div {
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
@@ -91,4 +91,19 @@ body {
 
 .row {
     margin: 0px;
+}
+
+.img-list {
+    padding: 20px;
+    width: auto;
+    height: 150px;
+}
+
+.new-entry-title {
+
+    width: 100%;
+}
+
+.new-entry-cover {
+    width: 100%;
 }

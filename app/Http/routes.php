@@ -26,12 +26,23 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // Dashboard
-Route::get('/dashboard', 'AdminController@newEntry');
-Route::post('/dashboard', 'AdminController@addEntry');
+Route::get('/dashboard', 'AdminController@dashboard');
+
+Route::get('/dashboard/images', 'AdminController@images');
+
+Route::get('/dashboard/new-entry', 'AdminController@newEntry');
+Route::post('/dashboard/new-entry', 'AdminController@addEntry');
+
+// Services
+// File upload/remove
+Route::post('/service/file-upload', 'AdminController@uploadFile');
+Route::post('/service/file-remove', 'AdminController@removeFile');
+// Parsedown
+Route::get('/service/parsedown', 'AdminController@parsedownEntry');
+// Entries
+Route::post('/service/entry-remove', 'AdminController@removeEntry');
 
 Route::get('/error', function()
 {
     return View::make('errors/503');
 });
-
-Route::get('/parsedown', 'AdminController@parsedownEntry');
