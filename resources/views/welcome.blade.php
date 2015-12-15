@@ -3,8 +3,6 @@
 @section('content')
     <div class="row">
         <div id="left" class="col-xs-4">
-            <img class="self-portrait" src="{{ asset('/images/me.png') }}"/>
-
             <div class="name center-text">Alex Bondor</div>
             <div class="title center-text">Computer Scientist</div>
             <div class="subtitle center-text">Doer|Creator|Persuader</div>
