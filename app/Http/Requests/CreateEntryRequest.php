@@ -6,7 +6,13 @@ use App\Http\Requests\Request;
 
 class CreateEntryRequest extends Request
 {
+    protected  $title;
+
+    protected $cover;
+
     protected $content;
+
+    protected $rawContent;
 
     protected $isHidden;
 
@@ -28,7 +34,9 @@ class CreateEntryRequest extends Request
     public function rules()
     {
         return [
-            'content' => 'required'
+            'title' => 'required',
+            'cover' => 'required',
+            'rawContent' => 'required'
         ];
     }
 }
