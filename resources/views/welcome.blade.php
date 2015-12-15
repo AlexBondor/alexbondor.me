@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="row">
-        <div id="left" class="col-xs-4">
+        <div id="left" class="col-xs-2">
             <div class="name center-text">Alex Bondor</div>
             <div class="title center-text">Computer Scientist</div>
-            <div class="subtitle center-text">Doer|Creator|Persuader</div>
+            <div class="subtitle center-text">Doer | Creator | Persuader</div>
         </div>
-        <div id="right" class="col-xs-8">
+        <div id="right" class="col-xs-10">
             <div class="row text">
                 <div class="col-xs-3">
                     <a href="/" class="link">
