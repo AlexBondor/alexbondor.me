@@ -32,7 +32,7 @@
             </div>
             <br>
 
-            <div class="entry">
+            <div class="entry-show">
                 <img class="cover-image" src="{{ $entry->cover }}"/>
                 <div class="text-over-cover">
                     <div class="title">
