@@ -1,5 +1,5 @@
 @extends('admin/navbar')
-@section('subcontent')
+@section('content')
     <h1 class="centered-title">Creative corner</h1>
     <div class="row">
         <div class="col-xs-12 col-sm-6">
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-@section('subscript')
+@section('script')
     @parent
     <script type="text/javascript">
         function parsedown() {

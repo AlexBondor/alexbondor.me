@@ -1,5 +1,5 @@
 @extends('admin/navbar')
-@section('subcontent')
+@section('content')
     <h1 class="centered-title">Images</h1>
     <form action="/service/file-upload"
           class="dropzone"
@@ -14,7 +14,7 @@
             </button>
         @endforeach
     </div>
-@section('subscript')
+@section('script')
     @parent
     <script type="text/javascript">
         Dropzone.options.myAwesomeDropzone = {

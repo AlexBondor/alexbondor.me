@@ -1,4 +1,4 @@
 @extends('admin/navbar')
-@section('subcontent')
+@section('content')
     <h1 class="centered-title">Entries</h1>
 @endsection

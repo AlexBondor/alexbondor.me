@@ -1,4 +1,19 @@
-@extends('app')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>alexbondor</title>
+
+    <meta charset="UTF-8">
+    <meta name="application-name" content="alexbondor.me">
+    <meta name="author" content="Alex Bondor">
+
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/dropzone.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+</head>
+<body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,9 +46,7 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-@section('content')
-    @yield('subcontent')
-@section('script')
-    @yield('subscript')
-@endsection
-@endsection
+@yield('content')
+</body>
+@yield('script')
+</html>

@@ -1,5 +1,5 @@
 @extends('admin/navbar')
-@section('subcontent')
+@section('content')
     {!! csrf_field() !!}
     <h1 class="centered-title">Dashboard</h1>
     <div id="myEntries">
@@ -17,7 +17,7 @@
             <br>
         @endforeach
     </div>
-@section('subscript')
+@section('script')
     @parent
     <script type="text/javascript">
         function removeEntry(id) {
