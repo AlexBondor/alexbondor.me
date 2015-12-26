@@ -20,20 +20,20 @@
 </head>
 <body>
 <div class="row">
-    <div id="left" class="col-xs-2">
-        <div class="name center-text">Alex Bondor</div>
-        <div class="title center-text">Computer Scientist</div>
-        <div class="subtitle center-text">Doer | Creator | Persuader</div>
+    <div id="left">
+        <div class="name vertical-text">Alex Bondor</div>
+        <div class="v-title vertical-text">Computer Scientist</div>
+        {{--<div class="subtitle center-text">Doer | Creator | Persuader</div>--}}
     </div>
     <div id="right" class="col-xs-10">
         <div class="row title">
             <div class="col-xs-3">
-                <a href="/" class="link">
+                <a id="projects" href="/" class="link">
                     >_ projects
                 </a>
             </div>
             <div class="col-xs-3">
-                <a href="/thoughts" class="link">
+                <a id="thoughts" href="/thoughts" class="link">
                     >_ thoughts
                 </a>
             </div>
@@ -56,6 +56,10 @@
 </div>
 
 </body>
+<script src="{{ asset('/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ asset('/js/jquery-ui.js') }}"></script>
+<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('/js/dropzone.js') }}"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -71,10 +75,18 @@
 
     ga('create', 'UA-63171754-2', 'auto');
     ga('send', 'pageview');
+
+    $(document).ready(function() {
+        var path = location.pathname;
+        if (path == "/") {
+            $("#thoughts").removeClass("link-active");
+            $("#projects").addClass("link-active");
+        }
+        else {
+            $("#projects").removeClass("link-active");
+            $("#thoughts").addClass("link-active");
+        }
+    });
 </script>
-<script src="{{ asset('/js/jquery-1.10.2.js') }}"></script>
-<script src="{{ asset('/js/jquery-ui.js') }}"></script>
-<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('/js/dropzone.js') }}"></script>
 @yield('script')
 </html>

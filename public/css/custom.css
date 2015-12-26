@@ -9,21 +9,35 @@ body {
 }
 
 .name {
-    margin: auto;
+    position: fixed;
+    padding-left: 7.6vw;
+    padding-top: 33vw;
+    width: 47vw;
+    height: 10vw;
     font-weight: 700;
-    font-size: 50px;
-    color: #FF6600;
-    text-decoration: underline;
+    font-size: 4vw;
+    color: #FFF;
 }
 
-.orange-text {
-    color: #FF6600;
+.v-title {
+    position: fixed;
+    padding-left: 3.4vw;
+    padding-top: 41.2vw;
+    width: 47vw;
+    height: 10vw;
+    font-weight: 700;
+    font-size: 2vw;
+    color: #c5c5cd;
 }
 
 .title {
     font-weight: 700;
     font-size: 26px;
     color: #636363;
+}
+
+.orange-text {
+    color: #FF6600;
 }
 
 .subtitle {
@@ -36,30 +50,27 @@ body {
     text-align: justify;
 }
 
-.self-portrait {
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .center-text {
     text-align: center;
 }
 
 .link {
-    color: #FF6600;
+    color: #c5c5cd;
     text-decoration: none;
 }
 
-.link:visited {
-    color: #c5c5cd;
+.link-active {
+    color: #FF6600;
     text-decoration: none;
 }
 
 #left {
     position: absolute;
-    top: 20px;
-    bottom: 0;
+    top: 0;
     left: 0;
+    height: 100%;
+    width: 6vw;
+    background-color: #636363;
 }
 
 #right {
@@ -68,6 +79,7 @@ body {
     bottom: 20px;
     right: 0;
     overflow-y: scroll;
+    width: 93vw;
 }
 
 .login-form {
@@ -134,4 +146,12 @@ body {
 
 .col-xs-3 {
     padding-left: 0px;
+}
+
+.vertical-text {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
