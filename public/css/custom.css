@@ -45,6 +45,10 @@ body {
     color: #c5c5cd;
 }
 
+div > p {
+    font-size: 0.9vw;
+}
+
 .text {
     font-size: 0.9vw;
     text-align: justify;
