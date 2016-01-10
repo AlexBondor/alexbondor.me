@@ -48,5 +48,9 @@
 </nav>
 @yield('content')
 </body>
+<script src="{{ asset('/js/jquery-1.10.2.js') }}"></script>
+<script src="{{ asset('/js/jquery-ui.js') }}"></script>
+<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('/js/dropzone.js') }}"></script>
 @yield('script')
 </html>
