@@ -33,6 +33,13 @@ class AdminController extends Controller
     public function images()
     {
         $images = File::files('uploads');
+        $directories = File::directories('uploads');
+
+        foreach($directories as $directory)
+        {
+            $directory_images = File::files($directory);
+            $images = array_merge($images, $directory_images);
+        }
 
         if (Request::ajax())
         {
