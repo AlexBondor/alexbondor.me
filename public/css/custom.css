@@ -176,3 +176,9 @@ body {
 .entry-date {
     font-size: 15px;
 }
+
+.game-box{
+    width: 282px;
+    height: 282px;
+    border: 1px solid #c5c5cd;
+}

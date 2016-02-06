@@ -56,6 +56,7 @@
                 @yield('content-left')
             </div>
             <div class="col-md-3">
+                <canvas id='snake' class='game-box'></canvas>
                 @yield('content-right')
             </div>
         </div>
@@ -67,6 +68,8 @@
 <script src="{{ asset('/js/jquery-ui.js') }}"></script>
 <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('/js/dropzone.js') }}"></script>
+<script src="{{ asset('/js/custom.js') }}"></script>
+<script src="{{ asset('/games/snake.js') }}"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
