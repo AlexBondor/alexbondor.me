@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('content')
+@section('content-left')
 
     @foreach($entries as $entry)
         <div class="entry" onclick="showEntry('{{ $entry->slug }}')">
@@ -8,9 +8,9 @@
 
             <div class="text-over-cover">
                 <div class="title">
-                    >_ {{ $entry->title }}
+                    {{ $entry->title }}
                 </div>
-                <div class="text">
+                <div class="entry-date">
                     {{ $entry->created_at->diffForHumans() }}
                 </div>
             </div>

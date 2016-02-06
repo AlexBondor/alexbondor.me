@@ -1,20 +1,15 @@
 @extends('app')
 
-@section('content')
+@section('content-left')
 
-    <div class="entry-show">
-        <img class="cover-image" src="{{ $entry->cover }}"/>
-
-        <div class="text-over-cover">
-            <div class="title">
-                {{ $entry->title }}
-            </div>
-            <div class="text">
-                {{ $entry->created_at->diffForHumans() }}
-            </div>
+    <div class="entry-body">
+        <div class="title">
+            {{ $entry->title }}
         </div>
+        <div class="entry-date">
+            {{ $entry->created_at->diffForHumans() }}
+        </div>
+        <hr>
+        {!! $entry->content !!}
     </div>
-    <hr>
-    {!! $entry->content !!}
-
 @endsection

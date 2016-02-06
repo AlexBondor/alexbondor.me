@@ -28,22 +28,22 @@
     <div id="right" class="col-xs-10">
         <div class="row title">
             <div class="col-xs-3">
-                <a id="projects" href="/" class="link">
+                <a id="projects" href="/" class="link subtitle">
                     >_ projects
                 </a>
             </div>
             <div class="col-xs-3">
-                <a id="thoughts" href="/thoughts" class="link">
+                <a id="thoughts" href="/thoughts" class="link subtitle">
                     >_ thoughts
                 </a>
             </div>
             <div class="col-xs-3">
-                <a href="https://github.com/AlexBondor" class="link" target="_blank">
+                <a href="https://github.com/AlexBondor" class="link subtitle" target="_blank">
                     >_ github
                 </a>
             </div>
             <div class="col-xs-3">
-                <a href="https://www.linkedin.com/in/alexandrubondor" class="link" target="_blank">
+                <a href="https://www.linkedin.com/in/alexandrubondor" class="link subtitle" target="_blank">
                     >_ linkedin
                 </a>
             </div>
@@ -51,7 +51,14 @@
         <br>
 
         @yield('content')
-
+        <div class="row">
+            <div class="col-md-9">
+                @yield('content-left')
+            </div>
+            <div class="col-md-3">
+                @yield('content-right')
+            </div>
+        </div>
     </div>
 </div>
 
@@ -76,7 +83,7 @@
     ga('create', 'UA-63171754-2', 'auto');
     ga('send', 'pageview');
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         var path = location.pathname;
         if (path == "/") {
             $("#thoughts").removeClass("link-active");
