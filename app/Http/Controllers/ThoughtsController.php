@@ -33,8 +33,6 @@ class ThoughtsController extends Controller
     {
         $entry = Entry::where('slug', $slug)->first();
 
-
-
         return view('thoughts.show', compact('entry'));
     }
 }
